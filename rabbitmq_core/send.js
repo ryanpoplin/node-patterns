@@ -1,7 +1,7 @@
 'use strict';
 // get the amqplib module from npm and utilize it's callback_api
 const amqp = require('amqplib/callback_api'),
-    config = require('../config'); // our nconf
+    config = require('./config'); // our nconf
 // connect to the RabbitMQ server
 amqp.connect(`amqp://${config.get('HOST')}`, (err, conn) => {
     // create a channel
@@ -9,7 +9,7 @@ amqp.connect(`amqp://${config.get('HOST')}`, (err, conn) => {
         // declare a queue to send data into
         const q = 'hello';
         // assert the queue (settings)
-        ch.assertQueue(q, {durable: false});
+        ch.assertQueue(q, {durable: true});
         // send data into the queue
         ch.sendToQueue(q, new Buffer('Hello World!'));
         // log it out
