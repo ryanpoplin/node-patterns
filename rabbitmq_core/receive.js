@@ -1,8 +1,9 @@
 'use strict';
 // get the amqplib module from npm and utilize it's callback_api
-const amqp = require('amqplib/callback_api');
+const amqp = require('amqplib/callback_api'),
+    config = require('../config'); // our nconf
 // connect to the RabbitMQ server
-amqp.connect('amqp://localhost', (err, conn) => {
+amqp.connect(`amqp://${config.get('HOST')}`, (err, conn) => {
     // create a channel for communications if one does not exist
     conn.createChannel((err, ch) => {
         // name of the queue we're wanting to get messages from

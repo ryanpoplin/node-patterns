@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ryanpoplin/node-patterns#readme",
   "dependencies": {
-    "amqplib": "^0.5.1"
+    "amqplib": "^0.5.1",
+    "nconf": "^0.8.4"
   }
 }
