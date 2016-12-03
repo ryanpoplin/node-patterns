@@ -1,0 +1,23 @@
+{
+  "name": "node-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanpoplin/node-patterns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanpoplin/node-patterns/issues"
+  },
+  "homepage": "https://github.com/ryanpoplin/node-patterns#readme",
+  "dependencies": {
+    "amqplib": "^0.5.1"
+  }
+}
